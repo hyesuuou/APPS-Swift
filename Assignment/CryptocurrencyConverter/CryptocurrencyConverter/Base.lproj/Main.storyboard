@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptocurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC 60.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE3-zP-fRI">
+                                <rect key="frame" x="155" y="50" width="104" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exchange Rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0v4-9w-0q0">
+                                <rect key="frame" x="25" y="155" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount to be exchanged" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8C-Rq-WIK">
+                                <rect key="frame" x="25" y="219" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yq5-gN-Dm5">
+                                <rect key="frame" x="162.5" y="296" width="89" height="32"/>
+                                <segments>
+                                    <segment title="BTC"/>
+                                    <segment title="ETH"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAs-VG-evl">
+                                <rect key="frame" x="173.5" y="361" width="67" height="30"/>
+                                <state key="normal" title="Exchange"/>
+                                <connections>
+                                    <action selector="exchangeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6J-eW-rVe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0v4-9w-0q0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="1Q6-ys-ekI"/>
+                            <constraint firstItem="R8C-Rq-WIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="20F-dx-Pnj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R8C-Rq-WIK" secondAttribute="trailing" constant="25" id="2j3-2n-Ef4"/>
+                            <constraint firstItem="zE3-zP-fRI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="7Nb-Qh-syE"/>
+                            <constraint firstItem="R8C-Rq-WIK" firstAttribute="top" secondItem="0v4-9w-0q0" secondAttribute="bottom" constant="30" id="EaJ-3e-Owq"/>
+                            <constraint firstItem="TAs-VG-evl" firstAttribute="top" secondItem="Yq5-gN-Dm5" secondAttribute="bottom" constant="34" id="MrH-6z-jaw"/>
+                            <constraint firstItem="0v4-9w-0q0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ryh-9K-6Fb"/>
+                            <constraint firstItem="Yq5-gN-Dm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sub-Of-aan"/>
+                            <constraint firstItem="R8C-Rq-WIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eat-7r-seA"/>
+                            <constraint firstItem="TAs-VG-evl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geA-m8-kkg"/>
+                            <constraint firstItem="Yq5-gN-Dm5" firstAttribute="top" secondItem="R8C-Rq-WIK" secondAttribute="bottom" constant="43" id="ldN-EW-6ux"/>
+                            <constraint firstItem="0v4-9w-0q0" firstAttribute="top" secondItem="zE3-zP-fRI" secondAttribute="bottom" constant="75" id="oyV-dG-eDL"/>
+                            <constraint firstItem="zE3-zP-fRI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rX1-19-yu4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0v4-9w-0q0" secondAttribute="trailing" constant="25" id="z4A-6j-wxJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="R8C-Rq-WIK" id="XCq-vB-Y0Y"/>
+                        <outlet property="ratioTextField" destination="0v4-9w-0q0" id="C23-oQ-Vxw"/>
+                        <outlet property="resultLabel" destination="zE3-zP-fRI" id="Bo9-Yv-cvF"/>
+                        <outlet property="toggleCurrency" destination="Yq5-gN-Dm5" id="XgS-nE-aV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
