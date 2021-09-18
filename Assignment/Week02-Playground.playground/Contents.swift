@@ -48,8 +48,27 @@ var day = "monday"
 
 print("Hi there. It is \(day). I earned \(income) pounds today.")
 
-// Logic & Boolean
+// MARK:- Logic & Boolean
 var isEurope: Bool = true
 if isEurope {
     print("Welcome to Europe")
 }
+
+// MARK:- Array
+var friends = ["리정", "모니카", "립제이", "시미즈", "가비", "아이키"]
+
+friends.first
+friends.last
+friends[2]
+
+friends.append("노제")
+friends.insert("효진초이", at: 1)
+
+friends.remove(at: 1)
+
+friends.count
+
+friends.remove(at: friends.count - 1)
+
+friends
+
