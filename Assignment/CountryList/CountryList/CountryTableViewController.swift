@@ -9,7 +9,7 @@ import UIKit
 
 class CountryTableViewController: UITableViewController {
     
-    let country = ["한국", "미국", "프랑스", "영국"]
+    let country = ["🇰🇷", "🇨🇦", "🇫🇷", "🇹🇷", "🇬🇧"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,15 @@ class CountryTableViewController: UITableViewController {
         cell.textLabel?.text = country[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCountry = country[indexPath.row]
+        performSegue(withIdentifier: "DefinitionSegue", sender: selectedCountry)
+    }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defOfVC = segue.destination as! CountryDefinitionVC
+        let selectedCountry = sender as! String
+        defOfVC.country = selectedCountry
+    }
 }

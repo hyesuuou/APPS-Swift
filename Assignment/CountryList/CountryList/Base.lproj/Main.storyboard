@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2O1-Zm-Vhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yat-ut-yEv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Country Table View Controller-->
+        <!--Country List-->
         <scene sceneID="Ah5-dn-E97">
             <objects>
                 <tableViewController id="2O1-Zm-Vhf" customClass="CountryTableViewController" customModule="CountryList" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,10 +31,73 @@
                             <outlet property="delegate" destination="2O1-Zm-Vhf" id="0z8-2B-PJX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Country List" id="E80-Hq-P2l"/>
+                    <connections>
+                        <segue destination="0oD-PS-cGc" kind="show" identifier="DefinitionSegue" id="Nwb-mO-P34"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="do3-03-TOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="131"/>
+            <point key="canvasLocation" x="1287" y="131"/>
+        </scene>
+        <!--Country DefinitionVC-->
+        <scene sceneID="WfN-ZT-hA1">
+            <objects>
+                <viewController id="0oD-PS-cGc" customClass="CountryDefinitionVC" customModule="CountryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o83-Cl-1dh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-VR-B4U">
+                                <rect key="frame" x="146.5" y="113" width="121.5" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-dV-Tqp">
+                                <rect key="frame" x="15" y="245.5" width="384" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HRD-HI-QSF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xtc-VR-B4U" firstAttribute="top" secondItem="HRD-HI-QSF" secondAttribute="top" constant="25" id="JWj-ug-h6F"/>
+                            <constraint firstItem="Xtc-VR-B4U" firstAttribute="centerX" secondItem="o83-Cl-1dh" secondAttribute="centerX" id="KBV-Zt-eWz"/>
+                            <constraint firstItem="x1l-dV-Tqp" firstAttribute="leading" secondItem="HRD-HI-QSF" secondAttribute="leading" constant="15" id="OzS-Td-Gyc"/>
+                            <constraint firstItem="HRD-HI-QSF" firstAttribute="trailing" secondItem="x1l-dV-Tqp" secondAttribute="trailing" constant="15" id="a2m-fw-Sjw"/>
+                            <constraint firstItem="x1l-dV-Tqp" firstAttribute="top" secondItem="Xtc-VR-B4U" secondAttribute="bottom" constant="70" id="n3F-Bv-yb3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4X2-oJ-zqo"/>
+                    <connections>
+                        <outlet property="countryDefinitionLabel" destination="x1l-dV-Tqp" id="Kko-sX-2Ge"/>
+                        <outlet property="flagLabel" destination="Xtc-VR-B4U" id="neb-FM-ReU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qho-OZ-trA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BWE-Oi-vFw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yat-ut-yEv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8WH-YA-66K">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2O1-Zm-Vhf" kind="relationship" relationship="rootViewController" id="GcI-od-6rv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kU7-Yr-kM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="131"/>
         </scene>
     </scenes>
     <resources>

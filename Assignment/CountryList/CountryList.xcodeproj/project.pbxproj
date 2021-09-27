@@ -13,6 +13,7 @@
 		15C40AD226F6690A00DF09BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C40AD126F6690A00DF09BA /* Assets.xcassets */; };
 		15C40AD526F6690A00DF09BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C40AD326F6690A00DF09BA /* LaunchScreen.storyboard */; };
 		15C40ADD26F669B500DF09BA /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C40ADC26F669B500DF09BA /* CountryTableViewController.swift */; };
+		15EF164A270219440067C1D9 /* CountryDefinitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF1649270219440067C1D9 /* CountryDefinitionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		15C40AD426F6690A00DF09BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15C40AD626F6690A00DF09BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C40ADC26F669B500DF09BA /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		15EF1649270219440067C1D9 /* CountryDefinitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDefinitionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				15C40AD126F6690A00DF09BA /* Assets.xcassets */,
 				15C40AD326F6690A00DF09BA /* LaunchScreen.storyboard */,
 				15C40AD626F6690A00DF09BA /* Info.plist */,
+				15EF1649270219440067C1D9 /* CountryDefinitionVC.swift */,
 			);
 			path = CountryList;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				15C40AC926F6690800DF09BA /* AppDelegate.swift in Sources */,
 				15C40ACB26F6690800DF09BA /* SceneDelegate.swift in Sources */,
+				15EF164A270219440067C1D9 /* CountryDefinitionVC.swift in Sources */,
 				15C40ADD26F669B500DF09BA /* CountryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
