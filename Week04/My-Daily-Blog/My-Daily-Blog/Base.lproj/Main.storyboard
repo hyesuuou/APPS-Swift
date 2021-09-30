@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zFi-OI-JaV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blog EntriesVC-->
+        <scene sceneID="6Tt-zz-DV0">
+            <objects>
+                <tableViewController id="iGn-p5-P3e" customClass="BlogEntriesVC" customModule="My_Daily_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4UI-xu-9LA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CQG-0P-MOp">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CQG-0P-MOp" id="hr6-PR-wWh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iGn-p5-P3e" id="R7t-9t-Sow"/>
+                            <outlet property="delegate" destination="iGn-p5-P3e" id="XNh-Fh-RAE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gtn-h2-ID1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="gZJ-Mx-Op6">
+                            <connections>
+                                <segue destination="1bv-P6-s8K" kind="show" id="M5V-X2-4g7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0M-os-WK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927.536231884058" y="156.69642857142856"/>
+        </scene>
+        <!--Blog App-->
+        <scene sceneID="OG7-IH-iUa">
+            <objects>
+                <viewController id="1bv-P6-s8K" customClass="BlogEntryVC" customModule="My_Daily_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFh-Ey-VpM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="6Lo-iK-RY3">
+                                <rect key="frame" x="47" y="113" width="320" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="C3t-vk-W43"/>
+                                </constraints>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-Vj-cJv">
+                                <rect key="frame" x="25" y="213" width="364" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hZY-bw-8Le"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Lo-iK-RY3" firstAttribute="top" secondItem="hZY-bw-8Le" secondAttribute="top" constant="25" id="531-DB-scF"/>
+                            <constraint firstItem="6Lo-iK-RY3" firstAttribute="centerX" secondItem="FFh-Ey-VpM" secondAttribute="centerX" id="5NL-TY-eBg"/>
+                            <constraint firstItem="yu5-Vj-cJv" firstAttribute="leading" secondItem="hZY-bw-8Le" secondAttribute="leading" constant="25" id="BtQ-EC-HC4"/>
+                            <constraint firstItem="hZY-bw-8Le" firstAttribute="bottom" secondItem="yu5-Vj-cJv" secondAttribute="bottom" constant="25" id="Hgu-sM-Dqh"/>
+                            <constraint firstItem="yu5-Vj-cJv" firstAttribute="top" secondItem="6Lo-iK-RY3" secondAttribute="bottom" constant="25" id="raa-dY-swP"/>
+                            <constraint firstItem="hZY-bw-8Le" firstAttribute="trailing" secondItem="yu5-Vj-cJv" secondAttribute="trailing" constant="25" id="uQm-JA-9S1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog App" id="ygc-Ge-Bg4">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="Bpe-Nl-Gqt">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blogEntryTextView" destination="yu5-Vj-cJv" id="vfc-Df-beC"/>
+                        <outlet property="datePicker" destination="6Lo-iK-RY3" id="P5O-Mu-AZw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIR-3j-Ywh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Swf-Ub-8vQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zFi-OI-JaV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="586-zG-RK7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iGn-p5-P3e" kind="relationship" relationship="rootViewController" id="2cL-KM-RiN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUa-Gg-u8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.39130434782609" y="156.69642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
