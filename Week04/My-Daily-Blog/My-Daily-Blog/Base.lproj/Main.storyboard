@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zFi-OI-JaV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zFi-OI-JaV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,13 +19,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CQG-0P-MOp">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="156" id="CQG-0P-MOp" customClass="BlogEntryTableViewCell" customModule="My_Daily_Blog" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CQG-0P-MOp" id="hr6-PR-wWh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-xn-M96">
+                                            <rect key="frame" x="15" y="10" width="56" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="56" id="XGx-kS-L19"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-Uh-PRV">
+                                            <rect key="frame" x="27" y="56" width="32" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" name="AccentColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQk-ps-iu8">
+                                            <rect key="frame" x="101" y="6" width="283" height="144"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mQk-ps-iu8" firstAttribute="top" secondItem="hr6-PR-wWh" secondAttribute="top" constant="6" id="0aW-Uc-3d9"/>
+                                        <constraint firstItem="mQk-ps-iu8" firstAttribute="leading" secondItem="0uF-xn-M96" secondAttribute="trailing" constant="30" id="DfN-DC-3x0"/>
+                                        <constraint firstItem="0uF-xn-M96" firstAttribute="top" secondItem="hr6-PR-wWh" secondAttribute="top" constant="10" id="FS0-iH-Ff5"/>
+                                        <constraint firstAttribute="bottom" secondItem="mQk-ps-iu8" secondAttribute="bottom" constant="6" id="FoN-hC-PXR"/>
+                                        <constraint firstItem="o9t-Uh-PRV" firstAttribute="centerX" secondItem="0uF-xn-M96" secondAttribute="centerX" id="pFu-3u-nKQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="mQk-ps-iu8" secondAttribute="trailing" constant="30" id="rAN-sq-saQ"/>
+                                        <constraint firstItem="o9t-Uh-PRV" firstAttribute="top" secondItem="0uF-xn-M96" secondAttribute="bottom" constant="10" id="ypb-vM-cIs"/>
+                                        <constraint firstItem="0uF-xn-M96" firstAttribute="leading" secondItem="hr6-PR-wWh" secondAttribute="leading" constant="15" id="zPL-ct-knF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateTag" destination="o9t-Uh-PRV" id="2T3-MY-apR"/>
+                                    <outlet property="entryLabel" destination="mQk-ps-iu8" id="H2B-GM-C32"/>
+                                    <outlet property="momthTag" destination="0uF-xn-M96" id="Rt5-M7-r1h"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +74,7 @@
                     <navigationItem key="navigationItem" id="gtn-h2-ID1">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="gZJ-Mx-Op6">
                             <connections>
-                                <segue destination="1bv-P6-s8K" kind="show" id="M5V-X2-4g7"/>
+                                <segue destination="1bv-P6-s8K" kind="show" identifier="onEntrySegue" id="M5V-X2-4g7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,6 +96,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="C3t-vk-W43"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="onDateChanged:" destination="1bv-P6-s8K" eventType="valueChanged" id="RXZ-p9-5A6"/>
+                                </connections>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-Vj-cJv">
                                 <rect key="frame" x="25" y="213" width="364" height="624"/>
@@ -80,10 +123,14 @@
                     <navigationItem key="navigationItem" title="Blog App" id="ygc-Ge-Bg4">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="Bpe-Nl-Gqt">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="onDelete:" destination="1bv-P6-s8K" id="xff-my-dCW"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="blogEntryTextView" destination="yu5-Vj-cJv" id="vfc-Df-beC"/>
+                        <outlet property="botConstraint" destination="Hgu-sM-Dqh" id="2un-Vr-IHJ"/>
                         <outlet property="datePicker" destination="6Lo-iK-RY3" id="P5O-Mu-AZw"/>
                     </connections>
                 </viewController>
@@ -111,6 +158,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
